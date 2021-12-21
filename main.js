@@ -2,13 +2,9 @@ const container = document.querySelector('#container')
 const headScore = document.querySelector('#head-score')
 const bodyScore = document.querySelector('#body-score')
 
-const url = 'http://api.web.educalinks.com.ec/api/courses/6/distributions'
-const token = '1490|fOtKUD8VDR0fjJB8KGz81hZNqhQkLnuE3D7J8FcV'
+const url = "http://api.web.educalinks.com.ec/api/courses/6/distributions"
+const token = "1490|fOtKUD8VDR0fjJB8KGz81hZNqhQkLnuE3D7J8FcV"
 
-/**
- * 
- * @returns all distributions
- */
 async function getDistributions () {
     const data = await fetch(url, {
         headers: {
@@ -75,6 +71,6 @@ function drawHead (data = []) {
     bodyScore.appendChild(fgCell)
 }
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', async function () {
     drawHead(await getDistributions())
 })
