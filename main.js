@@ -1,5 +1,3 @@
- 'use strict'
-
 const container = document.querySelector('#container')
 const headScore = document.querySelector('#head-score')
 const bodyScore = document.querySelector('#body-score')
