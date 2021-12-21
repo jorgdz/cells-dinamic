@@ -7,9 +7,10 @@ const token = "1490|fOtKUD8VDR0fjJB8KGz81hZNqhQkLnuE3D7J8FcV"
 
 async function getDistributions () {
     const data = await fetch(url, {
+        mode: 'cors',
+        cache: 'default',
         headers: {
-            mode: 'cors',
-            cache: 'default',
+            'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
         },
     })
